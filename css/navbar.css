@@ -1,46 +1,77 @@
-.navigation-menu{
-    display: grid;
-    grid-template-areas:
-    'logo navbar navbar'
-    ;
-    background-color: #333C83;
-    height: 75px;
-    
-}
-
-.logo{
-    grid-area: logo;
-    background-color: #333C83;
-}
-
 .navbar{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: #333C83;
-    align-items: center;
-    justify-content: right;
-    grid-area: navbar;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 16px;
+  background-color: #333C83;
+}
+
+
+.navigation-menu,.grid{
+     display: flex;
 }
 
 .navbar-item{
-    /* background-color: yellow; */
-    list-style:none;
-    margin: 10px;  
+    padding-right: 8px;
 }
-.navbar-item a{
+.links{
     text-decoration: none;
     color: white;
     padding: 10px 20px;
     transition: 0.5s;
-    border: 0px solid;
+    border: 0 solid;
     border-radius: 6px;
     font-size: 18px;
 }
 
-.navbar-item a:hover{
+.Navbar__Link-toggle {
+  display: none;
+}
+.links:hover{
     background-color: #212756;
 }
+
+
+@media only screen and (max-width: 768px) {
+
+.navbar,.navigation-menu{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.grid{
+display: grid;
+padding-top: 20px;
+height: 120px;
+ grid-template-columns: 100%;
+}
+
+.navigation-menu {
+    display:none;
+  }
+
+
+.Navbar__ToggleShow {
+    display: flex;
+  }
+
+.Navbar__Link-toggle {
+      margin-top: 2px;
+      color: white;
+      align-self: flex-end;
+      display: initial;
+      position: relative;
+      cursor: pointer;
+     }
+}
+.toggle-button:hover{
+  box-sizing: content-box;
+  box-shadow:  #E8F9FD 0px 10px 36px 0px, #001D6E 0px 0px 0px 1px;
+}
+
+}
+
+
 
 /* more colour codes
 #EAEA7F
