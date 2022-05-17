@@ -25,16 +25,25 @@
 <body>
 
     <header>
+      <div class="navbar">
+        <div class="Navbar__Link-toggle navbar-item">
+          <i class="fa-solid fa-bars fa-1.7x toggle-button"></i>
+        </div>
         <nav class="navigation-menu">
-            <div class="logo">
-
+          <div class="grid">
+            <div class="navbar-item">
+              <a class="links" href="#">Home</a>
             </div>
-            <ul class="navbar">
-                <li class="navbar-item"><a href="#">Home</a></li>
-                <li class="navbar-item"><a href="#">Blog</a></li>
-                <li class="navbar-item"><a href="#">Contact Us</a></li>
-            </ul>
+            <div class="navbar-item">
+              <a class="links" href="#">Blog</a>
+            </div>
+            <div class="navbar-item">
+              <a class="links" href="#">Contact Us</a>
+            </div>
+          </div>
         </nav>
+      </div>
+
     </header>
 
     <div class="main-container">
@@ -45,7 +54,7 @@
                 <h1>Easy Online Jobs for Students - Earn with Zero Investment</h1>
                 <div class="hr"></div>
                 </div>
-                
+
                 <div class="container-section-content">
                     <h2>Introduction</h2>
                     <p>Students are almost always in need of money and looking out for options of online jobs for students, even when there isn’t a global pandemic that has everybody in the entire world walking on a tightrope of uncertainty. We require funds for books, stationery, tuitions, fancy meals, and/or frequent outings that parents don’t pay for, gifts for friends, and ambitious career plans such as studying abroad. I’m sure we could add more reasons to the list of ‘How and why our pockets are perpetually empty’, but why bore you with information that you already have?</p>
@@ -105,8 +114,18 @@
         </aside>
     </div>
     <footer>
-    
+
     </footer>
+    <script type="text/javascript">
+    function classToggle() {
+      const navs = document.querySelectorAll('.navigation-menu')
+
+      navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+    }
+
+    document.querySelector('.Navbar__Link-toggle')
+      .addEventListener('click', classToggle);
+    </script>
 </body>
 
 </html>
