@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-container{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+section{
+
+}
+
+aside{
+    
+}
+
+
+/* media query */
+@media (max-width:1199px){
+    .main-container{
+        grid-template-columns: 1fr;
+    }
+}
